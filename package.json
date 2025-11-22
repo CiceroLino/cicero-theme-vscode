@@ -16,9 +16,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "cicero-lino-theme",
+        "label": "8-bit-theme",
         "uiTheme": "hc-black",
-        "path": "./themes/cicero-lino-theme-color-theme.json"
+        "path": "./themes/8-bit-theme-color-theme.json"
       }
     ]
   }
