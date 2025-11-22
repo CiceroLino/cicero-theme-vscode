@@ -78,7 +78,7 @@
 		// === STATUS BAR - Bottom bar with info ===
 		"statusBar.background": "#0000A0",                 // Dark blue (NES dark blue)
 		"statusBar.foreground": "#FFFFFF",                 // White text
-		"statusBar.border": "#4C4C4C",                     // Dark gray border
+		"statusBar.border": "#000000",                     // Dark gray border
 		"statusBar.debuggingBackground": "#FF0000",        // Red when debugging
 		"statusBar.debuggingForeground": "#FFFFFF",        // White text when debugging
 		"statusBar.noFolderBackground": "#A000A0",         // Purple when no folder open
