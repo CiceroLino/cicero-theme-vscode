@@ -1,41 +1,349 @@
 {
-	"name": "cicero-lino-theme",
+	"name": "cicero-lino-theme-8bit",
+	"type": "dark",
+	// DOCS: https://code.visualstudio.com/api/extension-guides/color-theme
+	// ===================================================================
+	// WORKBENCH COLORS - 8-BIT PALETTE
+	// ===================================================================
+	// Using retro 8-bit colors for the entire interface
+	// Color palette inspired by classic NES/console games
+	// ===================================================================
+	
 	"colors": {
-		"editor.background": "#000000",
-		"editor.foreground": "#ffffff"
+		// === EDITOR - Main coding area ===
+		"editor.background": "#000000",                    // Pure black (NES black)
+		"editor.foreground": "#FFFFFF",                    // Pure white (NES white)
+		"editor.lineHighlightBackground": "#000000",       // No highlight (keep black)
+		"editor.selectionBackground": "#FFFF00",           // Yellow selection
+		"editor.inactiveSelectionBackground": "#FF8800",   // Orange when unfocused
+		"editor.selectionHighlightBackground": "#FF880055", // Orange with transparency
+		"editor.findMatchBackground": "#FF8800",           // Orange for search matches
+		"editor.findMatchHighlightBackground": "#FF880055", // Semi-transparent orange
+		"editor.wordHighlightBackground": "#0000FF33",     // Semi-transparent blue
+		"editor.wordHighlightStrongBackground": "#0000FF66", // Blue for write access
+		"editor.hoverHighlightBackground": "#4C4C4C",      // Dark gray hover
+		
+		// === LINE NUMBERS ===
+		"editorLineNumber.foreground": "#A0A0A0",          // Gray line numbers
+		"editorLineNumber.activeForeground": "#FFFFFF",    // White active line number
+		
+		// === CURSOR ===
+		"editorCursor.foreground": "#00FF00",              // Green cursor (NES green)
+		"editorCursor.background": "#000000",              // Black cursor background
+		
+		// === INDENTATION GUIDES ===
+		"editorIndentGuide.background": "#4C4C4C",         // Dark gray guides
+		"editorIndentGuide.activeBackground": "#A0A0A0",   // Gray active guide
+		
+		// === WHITESPACE ===
+		"editorWhitespace.foreground": "#4C4C4C",          // Dark gray for spaces/tabs
+		
+		// === RULERS ===
+		"editorRuler.foreground": "#4C4C4C",               // Dark gray ruler lines
+		
+		// === BRACKETS ===
+		"editorBracketMatch.background": "#0000A033",      // Dark blue with transparency
+		"editorBracketMatch.border": "#0000FF",            // Blue bracket border
+		"editorBracketPairGuide.activeBackground1": "#00FF00",
+		"editorBracketPairGuide.activeBackground2": "#FFFF00",
+		"editorBracketPairGuide.activeBackground3": "#0000FF",
+		"editorBracketPairGuide.background1": "#4C4C4C",
+		"editorBracketPairGuide.background2": "#4C4C4C",
+		"editorBracketPairGuide.background3": "#4C4C4C",
+
+		
+		// === GUTTER (left side with line numbers) ===
+		"editorGutter.background": "#000000",              // Black gutter
+		"editorGutter.modifiedBackground": "#0000FF",      // Blue for modified lines
+		"editorGutter.addedBackground": "#00FF00",         // Green for added lines
+		"editorGutter.deletedBackground": "#FF0000",       // Red for deleted lines
+		
+		// === SIDEBAR - File explorer, search, etc ===
+		"sideBar.background": "#4C4C4C",                   // Black sidebar
+		"sideBar.foreground": "#FFFFFF",                   // White text
+		"sideBar.border": "#4C4C4C",                       // Dark gray border
+		"sideBarTitle.foreground": "#FFFF00",              // Yellow titles
+		"sideBarSectionHeader.background": "#000000",      // Black section headers
+		"sideBarSectionHeader.foreground": "#FFFF00",      // Yellow section text
+		"sideBarSectionHeader.border": "#4C4C4C",          // Dark gray border
+		
+		// === ACTIVITY BAR - Far left icons (Explorer, Search, Git, etc) ===
+		"activityBar.background": "#000000",               // Black activity bar
+		"activityBar.foreground": "#FFFFFF",               // White icons
+		"activityBar.inactiveForeground": "#A0A0A0",       // Gray inactive icons
+		"activityBar.border": "#4C4C4C",                   // Dark gray border
+		"activityBarBadge.background": "#FFFF00",          // Yellow notification badges
+		"activityBarBadge.foreground": "#000000",          // Black text on badges
+		
+		// === STATUS BAR - Bottom bar with info ===
+		"statusBar.background": "#0000A0",                 // Dark blue (NES dark blue)
+		"statusBar.foreground": "#FFFFFF",                 // White text
+		"statusBar.border": "#4C4C4C",                     // Dark gray border
+		"statusBar.debuggingBackground": "#FF0000",        // Red when debugging
+		"statusBar.debuggingForeground": "#FFFFFF",        // White text when debugging
+		"statusBar.noFolderBackground": "#A000A0",         // Purple when no folder open
+		"statusBarItem.prominentBackground": "#00FF00",    // Green for important items
+		"statusBarItem.prominentForeground": "#000000",    // Black text on green
+		
+		// === TITLE BAR - Top window bar ===
+		"titleBar.activeBackground": "#000000",            // Black when focused
+		"titleBar.activeForeground": "#FFFFFF",            // White text when focused
+		"titleBar.inactiveBackground": "#4C4C4C",          // Dark gray when unfocused
+		"titleBar.inactiveForeground": "#A0A0A0",          // Gray text when unfocused
+		"titleBar.border": "#4C4C4C",                      // Dark gray border
+		
+		// === TABS - Editor tabs ===
+		"tab.activeBackground": "#000000",                 // Black active tab
+		"tab.inactiveBackground": "#4C4C4C",               // Dark gray inactive tabs
+		"tab.activeForeground": "#FFFF00",                 // Yellow text on active tab
+		"tab.inactiveForeground": "#A0A0A0",               // Gray text on inactive tabs
+		"tab.border": "#4C4C4C",                           // Dark gray tab borders
+		"tab.activeBorder": "#FFFF00",                     // Yellow bottom border on active
+		"tab.unfocusedActiveForeground": "#FFFFFF",        // White when unfocused but active
+		"tab.unfocusedInactiveForeground": "#A0A0A0",      // Gray when unfocused & inactive
+		
+		// === EDITOR GROUPS - Split editors ===
+		"editorGroup.border": "#4C4C4C",                   // Dark gray between splits
+		"editorGroupHeader.tabsBackground": "#000000",     // Black tabs background
+		"editorGroupHeader.noTabsBackground": "#000000",   // Black when no tabs
+		
+		// === TERMINAL - Integrated terminal ===
+		"terminal.background": "#000000",                  // Black terminal background
+		"terminal.foreground": "#FFFFFF",                  // White terminal text
+		"terminal.ansiBlack": "#000000",                   // Black
+		"terminal.ansiRed": "#FF0000",                     // Red (NES red)
+		"terminal.ansiGreen": "#00FF00",                   // Green (NES green)
+		"terminal.ansiYellow": "#FFFF00",                  // Yellow (NES yellow)
+		"terminal.ansiBlue": "#0000FF",                    // Blue (NES blue)
+		"terminal.ansiMagenta": "#A000A0",                 // Purple (NES purple)
+		"terminal.ansiCyan": "#70A0FF",                    // Light blue (NES light blue)
+		"terminal.ansiWhite": "#FFFFFF",                   // White
+		"terminal.ansiBrightBlack": "#4C4C4C",             // Dark gray
+		"terminal.ansiBrightRed": "#FF0000",               // Bright red
+		"terminal.ansiBrightGreen": "#00FF00",             // Bright green
+		"terminal.ansiBrightYellow": "#FFFF00",            // Bright yellow
+		"terminal.ansiBrightBlue": "#70A0FF",              // Light blue
+		"terminal.ansiBrightMagenta": "#FF80FF",           // Pink
+		"terminal.ansiBrightCyan": "#70A0FF",              // Light blue
+		"terminal.ansiBrightWhite": "#FFFFFF",             // White
+		"terminalCursor.foreground": "#00FF00",            // Green cursor
+		"terminalCursor.background": "#000000",            // Black cursor background
+		
+		// === PANEL - Bottom panel (Terminal, Problems, Output, Debug Console) ===
+		"panel.background": "#000000",                     // Black panel
+		"panel.border": "#4C4C4C",                         // Dark gray border
+		"panelTitle.activeBorder": "#FFFF00",              // Yellow active border
+		"panelTitle.activeForeground": "#FFFF00",          // Yellow active text
+		"panelTitle.inactiveForeground": "#A0A0A0",        // Gray inactive text
+		
+		// === NOTIFICATIONS - Pop-up notifications ===
+		"notificationCenter.border": "#4C4C4C",            // Dark gray border
+		"notificationCenterHeader.background": "#000000",  // Black header
+		"notificationCenterHeader.foreground": "#FFFFFF",  // White text
+		"notifications.background": "#000000",             // Black notification
+		"notifications.foreground": "#FFFFFF",             // White text
+		"notifications.border": "#4C4C4C",                 // Dark gray border
+		"notificationLink.foreground": "#70A0FF",          // Light blue links
+		
+		// === BUTTONS ===
+		"button.background": "#0000FF",                    // Blue buttons (NES blue)
+		"button.foreground": "#FFFFFF",                    // White text
+		"button.hoverBackground": "#70A0FF",               // Light blue on hover
+		
+		// === INPUT FIELDS ===
+		"input.background": "#000000",                     // Black input background
+		"input.foreground": "#FFFFFF",                     // White input text
+		"input.border": "#4C4C4C",                         // Dark gray border
+		"input.placeholderForeground": "#A0A0A0",          // Gray placeholder
+		"inputOption.activeBorder": "#0000FF",             // Blue when active
+		"inputValidation.errorBackground": "#FF0000",      // Red for errors
+		"inputValidation.errorForeground": "#FFFFFF",      // White error text
+		"inputValidation.errorBorder": "#A00000",          // Dark red border
+		"inputValidation.warningBackground": "#FF8800",    // Orange for warnings
+		"inputValidation.warningForeground": "#000000",    // Black warning text
+		"inputValidation.warningBorder": "#FF8800",        // Orange border
+		"inputValidation.infoBackground": "#0000FF",       // Blue for info
+		"inputValidation.infoForeground": "#FFFFFF",       // White info text
+		"inputValidation.infoBorder": "#70A0FF",           // Light blue border
+		
+		// === DROPDOWN ===
+		"dropdown.background": "#000000",                  // Black dropdown
+		"dropdown.foreground": "#FFFFFF",                  // White text
+		"dropdown.border": "#4C4C4C",                      // Dark gray border
+		
+		// === LISTS & TREES - File explorer, suggestions, etc ===
+		"list.activeSelectionBackground": "#0000FF",       // Blue selected item
+		"list.activeSelectionForeground": "#FFFFFF",       // White selected text
+		"list.inactiveSelectionBackground": "#0000A0",     // Dark blue when unfocused
+		"list.inactiveSelectionForeground": "#FFFFFF",     // White text
+		"list.hoverBackground": "#4C4C4C",                 // Dark gray hover
+		"list.hoverForeground": "#FFFFFF",                 // White hover text
+		"list.focusBackground": "#0000FF",                 // Blue focus
+		"list.focusForeground": "#FFFFFF",                 // White focus text
+		"list.highlightForeground": "#FFFF00",             // Yellow for matches
+		"list.errorForeground": "#FF0000",                 // Red for errors
+		"list.warningForeground": "#FF8800",               // Orange for warnings
+		
+		// === SCROLLBAR ===
+		"scrollbar.shadow": "#000000",                     // Black shadow
+		"scrollbarSlider.background": "#4C4C4C88",         // Dark gray with transparency
+		"scrollbarSlider.hoverBackground": "#A0A0A0BB",    // Gray on hover
+		"scrollbarSlider.activeBackground": "#A0A0A0EE",   // Gray when dragging
+		
+		// === BADGES - Notification counts ===
+		"badge.background": "#FF0000",                     // Red badges (NES red)
+		"badge.foreground": "#FFFFFF",                     // White text on badges
+		
+		// === PROGRESS BAR ===
+		"progressBar.background": "#00FF00",               // Green progress (NES green)
+		
+		// === PEEK VIEW - Definition preview window ===
+		"peekView.border": "#0000FF",                      // Blue border
+		"peekViewEditor.background": "#000000",            // Black editor area
+		"peekViewEditor.matchHighlightBackground": "#FF880088", // Orange highlight
+		"peekViewResult.background": "#000000",            // Black results area
+		"peekViewResult.fileForeground": "#FFFFFF",        // White file names
+		"peekViewResult.lineForeground": "#A0A0A0",        // Gray line text
+		"peekViewResult.matchHighlightBackground": "#FF880088", // Orange matches
+		"peekViewResult.selectionBackground": "#0000FF",   // Blue selection
+		"peekViewResult.selectionForeground": "#FFFFFF",   // White selected text
+		"peekViewTitle.background": "#000000",             // Black title area
+		"peekViewTitleDescription.foreground": "#A0A0A0",  // Gray description
+		"peekViewTitleLabel.foreground": "#FFFF00",        // Yellow title
+		
+		// === MERGE CONFLICTS ===
+		"merge.currentHeaderBackground": "#00FF0044",      // Green for current
+		"merge.currentContentBackground": "#00FF0022",     // Light green content
+		"merge.incomingHeaderBackground": "#0000FF44",     // Blue for incoming
+		"merge.incomingContentBackground": "#0000FF22",    // Light blue content
+		"merge.border": "#4C4C4C",                         // Dark gray border
+		
+		// === GIT DECORATIONS - File colors in explorer ===
+		"gitDecoration.modifiedResourceForeground": "#0000FF",    // Blue for modified
+		"gitDecoration.deletedResourceForeground": "#FF0000",     // Red for deleted
+		"gitDecoration.untrackedResourceForeground": "#00FF00",   // Green for untracked
+		"gitDecoration.ignoredResourceForeground": "#A0A0A0",     // Gray for ignored
+		"gitDecoration.conflictingResourceForeground": "#FF8800", // Orange for conflicts
+		
+		// === BREADCRUMBS - File path navigation ===
+		"breadcrumb.foreground": "#A0A0A0",                // Gray breadcrumbs
+		"breadcrumb.background": "#000000",                // Black background
+		"breadcrumb.focusForeground": "#FFFFFF",           // White when focused
+		"breadcrumb.activeSelectionForeground": "#FFFF00", // Yellow when selected
+		"breadcrumbPicker.background": "#000000",          // Black picker background
+		
+		// === MINIMAP - Code overview on right side ===
+		"minimap.background": "#000000",                   // Black minimap
+		"minimap.findMatchHighlight": "#FF8800",           // Orange for matches
+		"minimap.selectionHighlight": "#FFFF00",           // Yellow for selection
+		"minimap.errorHighlight": "#FF0000",               // Red for errors
+		"minimap.warningHighlight": "#FF8800",             // Orange for warnings
+		
+		// === OVERVIEW RULER - Right side colored marks ===
+		"editorOverviewRuler.border": "#4C4C4C",           // Dark gray border
+		"editorOverviewRuler.modifiedForeground": "#0000FF", // Blue for modified
+		"editorOverviewRuler.addedForeground": "#00FF00",    // Green for added
+		"editorOverviewRuler.deletedForeground": "#FF0000",  // Red for deleted
+		"editorOverviewRuler.errorForeground": "#FF0000",    // Red for errors
+		"editorOverviewRuler.warningForeground": "#FF8800",  // Orange for warnings
+		"editorOverviewRuler.findMatchForeground": "#FF8800", // Orange for matches
+		
+		// === PROBLEMS PANEL - Errors and warnings ===
+		"problemsErrorIcon.foreground": "#FF0000",         // Red error icon
+		"problemsWarningIcon.foreground": "#FF8800",       // Orange warning icon
+		"problemsInfoIcon.foreground": "#0000FF",          // Blue info icon
+		
+		// === DIFF EDITOR - Side-by-side comparison ===
+		"diffEditor.insertedTextBackground": "#00FF0033", // Green for added
+		"diffEditor.removedTextBackground": "#FF000033",  // Red for removed
+		"diffEditor.insertedTextBorder": "#00FF00",       // Green border
+		"diffEditor.removedTextBorder": "#FF0000",        // Red border
+		"diffEditor.border": "#4C4C4C"                    // Dark gray border
 	},
+	
+	// ===================================================================
+	// TOKEN COLORS - SYNTAX HIGHLIGHTING
+	// ===================================================================
+	// These rules define how code elements are colored
+	// Works for: JavaScript, TypeScript, React, Node, Python, Java, C, CSS, HTML, Markdown
+	// ===================================================================
+	
 	"tokenColors": [
+		// ===================================================================
+		// MARKDOWN & DOCUMENTATION
+		// ===================================================================
+		
 		{
+			// Italic text in Markdown (*text* or _text_)
 			"scope": "emphasis",
 			"settings": {
 				"fontStyle": "italic"
 			}
 		},
 		{
+			// Bold text in Markdown (**text** or __text__)
 			"scope": "strong",
 			"settings": {
 				"fontStyle": "bold"
 			}
 		},
 		{
+			// Git diff headers (e.g., diff --git a/file.js b/file.js)
 			"scope": "meta.diff.header",
 			"settings": {
-				"foreground": "#000080"
+				"foreground": "#0000A0" // Dark blue
 			}
 		},
+		
+		// ===================================================================
+		// COMMENTS - All languages
+		// ===================================================================
+		
 		{
+			// ALL comments: //, /* */, /** JSDoc */, #, <!-- -->
+			// JavaScript: // comment, /* comment */
+			// Python: # comment
+			// Java: // comment, /* comment */
+			// C: // comment, /* comment */
+			// HTML: <!-- comment -->
+			// CSS: /* comment */
 			"scope": "comment",
 			"settings": {
-				"foreground": "#7ca668"
+				"foreground": "#A0A0A0", // Gray (NES gray)
+				"fontStyle": "italic"
 			}
 		},
 		{
+			// JSDoc tags: @param, @returns, @type, etc
+			"scope": [
+				"storage.type.class.jsdoc",
+				"entity.name.type.instance.jsdoc",
+				"variable.other.jsdoc"
+			],
+			"settings": {
+				"foreground": "#70A0FF" // Light blue
+			}
+		},
+		
+		// ===================================================================
+		// CONSTANTS & LITERAL VALUES - All languages
+		// ===================================================================
+		
+		{
+			// Special values: true, false, null, undefined, NaN, Infinity
+			// JavaScript/TypeScript: true, false, null, undefined
+			// Python: True, False, None
+			// Java: true, false, null
+			// C: true, false, NULL
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#FF0000" // Red (NES red)
 			}
 		},
 		{
+			// Numbers and RGB colors
+			// All languages: 42, 3.14, 0xFF, 0b1010
+			// CSS: #ff0000, rgb(255, 0, 0)
 			"scope": [
 				"constant.numeric",
 				"constant.other.color.rgb-value",
@@ -43,173 +351,458 @@
 				"support.constant.color"
 			],
 			"settings": {
-				"foreground": "#b5cea8"
+				"foreground": "#FF80FF" // Pink (NES pink)
 			}
 		},
 		{
+			// Regular expressions (regex)
+			// JavaScript: /[a-z]+/gi, new RegExp('\\d+')
+			// Python: re.compile(r'\d+')
 			"scope": "constant.regexp",
 			"settings": {
-				"foreground": "#b46695"
+				"foreground": "#A000A0" // Purple (NES purple)
 			}
 		},
 		{
+			// Character constants
+			// C: 'a', '\n', '\0'
+			// Java: 'x'
+			"scope": "constant.character",
+			"settings": {
+				"foreground": "#FF80FF" // Pink
+			}
+		},
+		
+		// ===================================================================
+		// HTML/JSX TAGS
+		// ===================================================================
+		
+		{
+			// HTML/JSX tag names: <div>, <span>, <button>, <MyComponent>
+			// HTML: <div>, <p>, <section>
+			// JSX/React: <MyComponent>, <Button>
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#FF8800" // Orange (NES orange)
 			}
 		},
 		{
+			// CSS tag selectors
+			// CSS: div { ... }, p { ... }, section { ... }
 			"scope": "entity.name.tag.css",
 			"settings": {
-				"foreground": "#d7ba7d"
+				"foreground": "#FFFF00" // Yellow (NES yellow)
 			}
 		},
+		
+		// ===================================================================
+		// HTML/JSX ATTRIBUTES
+		// ===================================================================
+		
 		{
+			// HTML/JSX attributes and props
+			// HTML: <div class="..." id="..." disabled>
+			// JSX: <Component onClick={...} className="..." disabled>
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#9cdcfe"
+				"foreground": "#70A0FF", // Light blue (NES light blue)
+				"fontStyle": "italic"
 			}
 		},
 		{
+			// CSS class and ID selectors
+			// CSS: .className, #id, [data-attribute]
 			"scope": [
 				"source.css entity.other.attribute-name",
 				"source.css.less entity.other.attribute-name.id",
 				"source.scss entity.other.attribute-name"
 			],
 			"settings": {
-				"foreground": "#d7ba7d"
+				"foreground": "#FFFF00" // Yellow
 			}
 		},
+		
+		// ===================================================================
+		// ERRORS & WARNINGS
+		// ===================================================================
+		
 		{
+			// Invalid/syntax error code
+			// All languages: highlighted by VS Code when there's a syntax error
 			"scope": "invalid",
 			"settings": {
-				"foreground": "#f44747"
+				"foreground": "#FF0000" // Red (NES red)
 			}
 		},
 		{
+			// Deprecated code
+			"scope": "invalid.deprecated",
+			"settings": {
+				"foreground": "#A00000", // Dark red
+				"fontStyle": "strikethrough"
+			}
+		},
+		
+		// ===================================================================
+		// MARKDOWN - FORMATTING
+		// ===================================================================
+		
+		{
+			// Underlined text in Markdown
 			"scope": "markup.underline",
 			"settings": {
 				"fontStyle": "underline"
 			}
 		},
 		{
+			// Bold text in Markdown
 			"scope": "markup.bold",
 			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#FFFFFF" // White for emphasis
+			}
+		},
+		{
+			// Headers in Markdown: # Title, ## Subtitle
+			"scope": "markup.heading",
+			"settings": {
+				"foreground": "#FFFF00", // Yellow
 				"fontStyle": "bold"
 			}
 		},
 		{
-			"scope": "markup.heading",
-			"settings": {
-				"foreground": "#6796e6"
-			}
-		},
-		{
+			// Italic text in Markdown
 			"scope": "markup.italic",
 			"settings": {
 				"fontStyle": "italic"
 			}
 		},
 		{
+			// Inline code in Markdown: `code`
+			"scope": "markup.inline.raw",
+			"settings": {
+				"foreground": "#00FF00" // Green
+			}
+		},
+		{
+			// Code blocks in Markdown: ```code```
+			"scope": "markup.fenced_code.block",
+			"settings": {
+				"foreground": "#00FF00" // Green
+			}
+		},
+		{
+			// Links in Markdown: [text](url)
+			"scope": [
+				"markup.underline.link",
+				"string.other.link"
+			],
+			"settings": {
+				"foreground": "#70A0FF", // Light blue
+				"fontStyle": "underline"
+			}
+		},
+		{
+			// Lists in Markdown: -, *, +, 1.
+			"scope": "markup.list",
+			"settings": {
+				"foreground": "#FF8800" // Orange
+			}
+		},
+		{
+			// Quotes in Markdown: > quote
+			"scope": "markup.quote",
+			"settings": {
+				"foreground": "#A0A0A0", // Gray
+				"fontStyle": "italic"
+			}
+		},
+		
+		// ===================================================================
+		// GIT DIFF - CHANGES
+		// ===================================================================
+		
+		{
+			// Lines ADDED in Git diffs (+ green lines)
 			"scope": "markup.inserted",
 			"settings": {
-				"foreground": "#b5cea8"
+				"foreground": "#00FF00" // Green (NES green)
 			}
 		},
 		{
+			// Lines REMOVED in Git diffs (- red lines)
 			"scope": "markup.deleted",
 			"settings": {
-				"foreground": "#ce9178"
+				"foreground": "#FF0000" // Red (NES red)
 			}
 		},
 		{
+			// Lines MODIFIED in Git diffs
 			"scope": "markup.changed",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#0000FF" // Blue (NES blue)
 			}
 		},
+		
+		// ===================================================================
+		// CSS - SELECTORS
+		// ===================================================================
+		
 		{
+			// CSS selectors: .class, #id, element
 			"scope": "meta.selector",
 			"settings": {
-				"foreground": "#d7ba7d"
+				"foreground": "#FFFF00" // Yellow
 			}
 		},
 		{
-			"name": "brackets of XML/HTML tags",
+			// HTML/JSX tag brackets: < > </ />
+			// Example: <div>...</div>
+			//          ^   ^   ^^    ^^
+			"name": "Brackets of XML/HTML tags",
 			"scope": [
 				"punctuation.definition.tag"
 			],
 			"settings": {
-				"foreground": "#808080"
+				"foreground": "#A0A0A0" // Gray
 			}
 		},
 		{
+			// CSS pseudo-classes: :hover, :active, :focus
+			"scope": "entity.other.attribute-name.pseudo-class.css",
+			"settings": {
+				"foreground": "#FF8800" // Orange
+			}
+		},
+		{
+			// CSS pseudo-elements: ::before, ::after
+			"scope": "entity.other.attribute-name.pseudo-element.css",
+			"settings": {
+				"foreground": "#FF8800" // Orange
+			}
+		},
+		
+		// ===================================================================
+		// PREPROCESSORS (C/C++)
+		// ===================================================================
+		
+		{
+			// Preprocessor directives: #include, #define, #ifdef
+			// C/C++: #include <stdio.h>, #define MAX 100
 			"scope": "meta.preprocessor",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#A000A0" // Purple
 			}
 		},
 		{
+			// Strings in preprocessor directives
+			// C/C++: #include "myfile.h"
 			"scope": "meta.preprocessor.string",
 			"settings": {
-				"foreground": "#ce9178"
+				"foreground": "#FFFFFF" // White
 			}
 		},
 		{
+			// Numbers in preprocessor directives
 			"scope": "meta.preprocessor.numeric",
 			"settings": {
-				"foreground": "#b5cea8"
+				"foreground": "#FF80FF" // Pink
 			}
 		},
+		
+		// ===================================================================
+		// PYTHON - SPECIFIC
+		// ===================================================================
+		
 		{
+			// Python dictionary keys
+			// Python: my_dict = {"key": "value"}
 			"scope": "meta.structure.dictionary.key.python",
 			"settings": {
-				"foreground": "#9cdcfe"
+				"foreground": "#70A0FF" // Light blue
 			}
 		},
 		{
+			// Python function decorators: @decorator
+			"scope": [
+				"entity.name.function.decorator.python",
+				"meta.function.decorator.python"
+			],
+			"settings": {
+				"foreground": "#FFFF00" // Yellow
+			}
+		},
+		{
+			// Python self parameter
+			"scope": "variable.parameter.function.language.special.self.python",
+			"settings": {
+				"foreground": "#A000A0", // Purple
+				"fontStyle": "italic"
+			}
+		},
+		{
+			// Python magic methods: __init__, __str__
+			"scope": "support.function.magic.python",
+			"settings": {
+				"foreground": "#FF8800" // Orange
+			}
+		},
+		
+		// ===================================================================
+		// JAVA - SPECIFIC
+		// ===================================================================
+		
+		{
+			// Java import statements
+			// Java: import java.util.*;
+			"scope": [
+				"storage.modifier.import.java",
+				"variable.language.wildcard.java",
+				"storage.modifier.package.java"
+			],
+			"settings": {
+				"foreground": "#A000A0" // Purple
+			}
+		},
+		{
+			// Java annotations: @Override, @Deprecated
+			"scope": [
+				"storage.type.annotation.java",
+				"punctuation.definition.annotation.java"
+			],
+			"settings": {
+				"foreground": "#FFFF00" // Yellow
+			}
+		},
+		{
+			// Java this keyword
+			"scope": "variable.language.this.java",
+			"settings": {
+				"foreground": "#A000A0", // Purple
+				"fontStyle": "italic"
+			}
+		},
+		{
+			// Java super keyword
+			"scope": "variable.language.super.java",
+			"settings": {
+				"foreground": "#A000A0", // Purple
+				"fontStyle": "italic"
+			}
+		},
+		
+		// ===================================================================
+		// C/C++ - SPECIFIC
+		// ===================================================================
+		
+		{
+			// C/C++ pointers: *, &, ->
+			"scope": [
+				"storage.modifier.pointer.c",
+				"storage.modifier.reference.c"
+			],
+			"settings": {
+				"foreground": "#FF8800" // Orange
+			}
+		},
+		{
+			// C/C++ memory management: malloc, free, new, delete
+			"scope": "keyword.operator.new",
+			"settings": {
+				"foreground": "#FF0000" // Red
+			}
+		},
+		
+		// ===================================================================
+		// STORAGE - TYPE DECLARATIONS (All languages)
+		// ===================================================================
+		
+		{
+			// Generic "storage" keyword (rarely used directly)
 			"scope": "storage",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#0000FF" // Blue
 			}
 		},
 		{
+			// Type declarations: const, let, var, function, class, interface, type
+			// JavaScript/TypeScript: const, let, var, function, class, interface, type
+			// Python: def, class
+			// Java: class, interface, enum
+			// C: int, char, float, double, void, struct
 			"scope": "storage.type",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#0000FF" // Blue (NES blue)
 			}
 		},
 		{
+			// Modifiers: static, async, public, private, readonly, protected
+			// JavaScript/TypeScript: async, static, readonly
+			// Python: async, staticmethod, classmethod
+			// Java: public, private, protected, static, final, abstract
+			// C: static, const, extern, volatile
 			"scope": "storage.modifier",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#A000A0" // Purple (NES purple)
 			}
 		},
+		
+		// ===================================================================
+		// STRINGS - All languages
+		// ===================================================================
+		
 		{
+			// ALL strings: 'text', "text", `template literal`
+			// JavaScript/TypeScript: "string", 'string', `template`
+			// Python: "string", 'string', """multiline"""
+			// Java: "string"
+			// C: "string"
+			// HTML: "attribute value"
 			"scope": "string",
 			"settings": {
-				"foreground": "#ce9178"
+				"foreground": "#FFFFFF" // White (NES white)
 			}
 		},
 		{
+			// Strings in tags (less common)
 			"scope": "string.tag",
 			"settings": {
-				"foreground": "#ce9178"
+				"foreground": "#FFFFFF" // White
 			}
 		},
 		{
+			// String values (more specific)
 			"scope": "string.value",
 			"settings": {
-				"foreground": "#ce9178"
+				"foreground": "#FFFFFF" // White
 			}
 		},
 		{
+			// Strings inside regex
+			// Example: /abc"def"/
 			"scope": "string.regexp",
 			"settings": {
-				"foreground": "#d16969"
+				"foreground": "#FF80FF" // Pink
 			}
 		},
 		{
+			// Escape sequences in strings: \n, \t, \", \\
+			// All languages: "\n", "\t", "\\", "\""
+			"scope": "constant.character.escape",
+			"settings": {
+				"foreground": "#FF8800", // Orange
+				"fontStyle": "bold"
+			}
+		},
+		
+		// ===================================================================
+		// TEMPLATE LITERALS - INTERPOLATION ${} (JavaScript/TypeScript)
+		// ===================================================================
+		
+		{
+			// The ${ } symbols in template literals
+			// JavaScript/TypeScript: `Hello ${name}!`
+			//                                ^^    ^^
 			"name": "JavaScript string interpolation ${}",
 			"scope": [
 				"punctuation.definition.template-expression.begin.js",
@@ -218,10 +811,25 @@
 				"punctuation.definition.template-expression.end.js"
 			],
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#0000FF" // Blue
 			}
 		},
 		{
+			// Content inside ${}
+			"scope": "meta.template.expression",
+			"settings": {
+				"foreground": "#70A0FF" // Light blue
+			}
+		},
+		
+		// ===================================================================
+		// CSS - PROPERTIES
+		// ===================================================================
+		
+		{
+			// CSS property names: color, display, margin, padding, etc
+			// CSS: .class { color: red; display: flex; }
+			//               ^^^^^        ^^^^^^^
 			"scope": [
 				"support.type.vendored.property-name",
 				"support.type.property-name",
@@ -230,102 +838,160 @@
 				"variable.other.less"
 			],
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#70A0FF" // Light blue
 			}
 		},
 		{
+			// CSS units: px, em, rem, %, vh, vw, deg, s, ms
+			// CSS: width: 100px; margin: 2em;
+			//               ^^           ^^
+			"scope": "keyword.other.unit",
+			"settings": {
+				"foreground": "#FF80FF" // Pink
+			}
+		},
+		{
+			// CSS at-rules: @media, @import, @keyframes
+			"scope": [
+				"keyword.control.at-rule",
+				"punctuation.definition.keyword.css"
+			],
+			"settings": {
+				"foreground": "#A000A0" // Purple
+			}
+		},
+		
+		// ===================================================================
+		// KEYWORDS - All languages
+		// ===================================================================
+		
+		{
+			// ALL keywords (generic - will be overridden by specific rules below)
+			// This is a catch-all for any keyword not specified elsewhere
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#00FF00" // Green (NES green)
 			}
 		},
 		{
+			// CONTROL FLOW keywords:
+			// JavaScript/TypeScript: if, else, switch, case, for, while, do, break, continue, return, try, catch, finally, throw
+			// Python: if, elif, else, for, while, break, continue, return, try, except, finally, raise, with, yield
+			// Java: if, else, switch, case, for, while, do, break, continue, return, try, catch, finally, throw
+			// C: if, else, switch, case, for, while, do, break, continue, return, goto
 			"scope": "keyword.control",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#00FF00" // Green (NES green)
 			}
 		},
 		{
+			// OPERATORS: +, -, *, /, =, ==, ===, !=, !==, >, <, &&, ||, !, ?
+			// All languages: arithmetic, comparison, logical operators
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#FFFFFF" // White
 			}
 		},
 		{
+			// SPECIAL operators: new, typeof, instanceof, delete, void, await
+			// JavaScript/TypeScript: new, typeof, instanceof, delete, void, await, in, of
+			// Python: is, in, not, and, or
+			// Java: new, instanceof
+			// C: sizeof, typeof
 			"scope": [
 				"keyword.operator.new",
 				"keyword.operator.expression",
 				"keyword.operator.cast",
 				"keyword.operator.sizeof",
-				"keyword.operator.logical.python"
+				"keyword.operator.logical.python",
+				"keyword.operator.wordlike"
 			],
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#0000FF" // Blue
 			}
 		},
 		{
-			"scope": "keyword.other.unit",
-			"settings": {
-				"foreground": "#b5cea8"
-			}
-		},
-		{
-			"scope": "support.function.git-rebase",
-			"settings": {
-				"foreground": "#d4d4d4"
-			}
-		},
-		{
-			"scope": "constant.sha.git-rebase",
-			"settings": {
-				"foreground": "#b5cea8"
-			}
-		},
-		{
-			"name": "coloring of the Java import and package identifiers",
+			// IMPORT/EXPORT keywords:
+			// JavaScript/TypeScript: import, export, from, as, default
+			// Python: import, from, as
+			// Java: import
+			// C: #include (handled by preprocessor)
 			"scope": [
-				"storage.modifier.import.java",
-				"variable.language.wildcard.java",
-				"storage.modifier.package.java"
+				"keyword.control.import",
+				"keyword.control.export",
+				"keyword.control.from",
+				"keyword.control.as",
+				"keyword.control.default"
 			],
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#A000A0" // Purple
 			}
 		},
+		
+		// ===================================================================
+		// FUNCTIONS - All languages
+		// ===================================================================
+		
 		{
-			"name": "coloring of the TS this",
-			"scope": "variable.language.this",
-			"settings": {
-				"foreground": "#569cd6"
-			}
-		},
-		{
-			"name": "Function declarations",
+			// FUNCTION and METHOD names (in declaration and when calling)
+			// JavaScript/TypeScript: function getData() {}, myObj.method()
+			// Python: def my_function():, obj.method()
+			// Java: public void myMethod(), obj.doSomething()
+			// C: void myFunction(), printf()
+			"name": "Function declarations and calls",
 			"scope": [
 				"entity.name.function",
 				"support.function",
 				"support.constant.handlebars"
 			],
 			"settings": {
-				"foreground": "#DCDCAA"
+				"foreground": "#FFFF00" // Yellow (NES yellow)
 			}
 		},
 		{
-			"name": "Types declaration and references",
+			// Built-in functions
+			// JavaScript: console.log, Math.max, Array.from
+			// Python: print, len, range, str, int
+			// Java: System.out.println
+			// C: printf, scanf, malloc, free
+			"scope": [
+				"support.function.builtin",
+				"support.function.console"
+			],
+			"settings": {
+				"foreground": "#FF8800" // Orange
+			}
+		},
+		
+		// ===================================================================
+		// TYPES & CLASSES - All languages
+		// ===================================================================
+		
+		{
+			// TYPE and CLASS names
+			// JavaScript/TypeScript: class MyClass {}, interface IUser {}, type MyType
+			// Python: class MyClass:
+			// Java: class MyClass, interface IMyInterface
+			// C: struct MyStruct, typedef
+			"name": "Types, classes and interfaces",
 			"scope": [
 				"meta.return-type",
 				"support.class",
 				"support.type",
 				"entity.name.type",
 				"entity.name.class",
+				"entity.name.type.class",
 				"source.cs storage.type"
 			],
 			"settings": {
-				"foreground": "#4EC9B0"
+				"foreground": "#00FF00", // Green (NES green)
+				"fontStyle": "bold"
 			}
 		},
 		{
-			"name": "Types declaration and references, TS grammar specific",
+			// Types in SPECIFIC contexts (TypeScript)
+			// TypeScript: value as MyType, new MyClass(), Math.PI
+			"name": "Type references in special contexts",
 			"scope": [
 				"meta.type.cast.expr",
 				"meta.type.new.expr",
@@ -335,39 +1001,139 @@
 				"entity.other.inherited-class"
 			],
 			"settings": {
-				"foreground": "#4EC9B0"
+				"foreground": "#00FF00" // Green
 			}
 		},
 		{
-			"name": "Control flow keywords",
-			"scope": "keyword.control",
+			// Built-in types
+			// TypeScript: string, number, boolean, any, void, never
+			// Python: int, str, float, bool, list, dict, tuple
+			// Java: int, String, boolean, void, Object
+			// C: int, char, float, double, void, size_t
+			"scope": [
+				"support.type.primitive",
+				"support.type.builtin",
+				"keyword.type"
+			],
 			"settings": {
-				"foreground": "#C586C0"
+				"foreground": "#0000FF" // Blue
 			}
 		},
 		{
-			"name": "Variable and parameter name",
+			// Generics/Type parameters
+			// TypeScript: Array<T>, Map<K, V>
+			// Java: List<String>, Map<K, V>
+			"scope": [
+				"entity.name.type.parameter",
+				"meta.type.parameters"
+			],
+			"settings": {
+				"foreground": "#70A0FF" // Light blue
+			}
+		},
+		
+		// ===================================================================
+		// VARIABLES & PARAMETERS - All languages
+		// ===================================================================
+		
+		{
+			// ALL variables and parameters
+			// JavaScript/TypeScript: const myVar = 10, function test(param) {}
+			// Python: my_var = 10, def test(param):
+			// Java: int myVar = 10, void test(int param) {}
+			// C: int myVar = 10, void test(int param) {}
+			"name": "Variables and parameters",
 			"scope": [
 				"variable",
 				"meta.definition.variable.name",
 				"support.variable"
 			],
 			"settings": {
-				"foreground": "#9CDCFE"
+				"foreground": "#70A0FF" // Light blue (NES light blue)
 			}
 		},
 		{
-			"name": "Object keys, TS grammar specific",
+			// Function parameters specifically
+			"scope": "variable.parameter",
+			"settings": {
+				"foreground": "#FF80FF", // Pink
+				"fontStyle": "italic"
+			}
+		},
+		{
+			// THIS keyword (JavaScript/TypeScript/Java/C++)
+			// JavaScript/TypeScript: this.method()
+			// Java: this.field
+			// Python: self (handled separately above)
+			"name": "This/self keyword",
+			"scope": "variable.language.this",
+			"settings": {
+				"foreground": "#A000A0", // Purple
+				"fontStyle": "italic"
+			}
+		},
+		{
+			// Special language variables
+			// JavaScript: arguments, super
+			// Python: __name__, __file__
+			"scope": [
+				"variable.language",
+				"variable.language.super"
+			],
+			"settings": {
+				"foreground": "#A000A0", // Purple
+				"fontStyle": "italic"
+			}
+		},
+		{
+			// Constants (UPPERCASE_NAMING)
+			// All languages: const MAX_SIZE = 100, MY_CONSTANT = "value"
+			"scope": "variable.other.constant",
+			"settings": {
+				"foreground": "#FF0000", // Red
+				"fontStyle": "bold"
+			}
+		},
+		
+		// ===================================================================
+		// OBJECT KEYS & PROPERTIES - JavaScript/TypeScript
+		// ===================================================================
+		
+		{
+			// Object literal KEYS
+			// JavaScript/TypeScript: const obj = { name: 'John', age: 30 }
+			//                                      ^^^^        ^^^
+			"name": "Object keys",
 			"scope": [
 				"meta.object-literal.key",
 				"meta.object-literal.key entity.name.function"
 			],
 			"settings": {
-				"foreground": "#9CDCFE"
+				"foreground": "#70A0FF" // Light blue
 			}
 		},
 		{
-			"name": "CSS property value",
+			// Object properties accessed with dot notation
+			// JavaScript/TypeScript: user.name, obj.getValue()
+			//                             ^^^^       ^^^^^^^^
+			"scope": [
+				"variable.other.property",
+				"variable.other.object.property"
+			],
+			"settings": {
+				"foreground": "#70A0FF" // Light blue
+			}
+		},
+		
+		// ===================================================================
+		// CSS - PROPERTY VALUES
+		// ===================================================================
+		
+		{
+			// CSS property VALUES
+			// CSS: color: red; font-family: Arial; display: flex;
+			//             ^^^               ^^^^^           ^^^^
+			"name": "CSS property values",
 			"scope": [
 				"support.constant.property-value",
 				"support.constant.font-name",
@@ -378,8 +1144,252 @@
 				"support.constant.color"
 			],
 			"settings": {
-				"foreground": "#CE9178"
+				"foreground": "#FFFFFF" // White
 			}
+		},
+		{
+			// CSS color values: #fff, rgb(), rgba(), hsl()
+			"scope": [
+				"constant.other.color",
+				"constant.color"
+			],
+			"settings": {
+				"foreground": "#FF80FF" // Pink
+			}
+		},
+		{
+			// CSS important: !important
+			"scope": "keyword.other.important.css",
+			"settings": {
+				"foreground": "#FF0000", // Red
+				"fontStyle": "bold"
+			}
+		},
+		
+		// ===================================================================
+		// PUNCTUATION - All languages
+		// ===================================================================
+		
+		{
+			// Parentheses, brackets, braces: ( ) [ ] { }
+			"scope": [
+				"punctuation.definition.block",
+				"punctuation.definition.parameters",
+				"punctuation.definition.array",
+				"punctuation.section.embedded"
+			],
+			"settings": {
+				"foreground": "#FFFFFF" // White
+			}
+		},
+		{
+			// Semicolons, colons, commas: ; : ,
+			"scope": [
+				"punctuation.separator",
+				"punctuation.terminator"
+			],
+			"settings": {
+				"foreground": "#A0A0A0" // Gray
+			}
+		},
+		{
+			// Arrow function arrow: =>
+			"scope": "storage.type.function.arrow",
+			"settings": {
+				"foreground": "#00FF00" // Green
+			}
+		},
+		
+		// ===================================================================
+		// GIT & VERSION CONTROL
+		// ===================================================================
+		
+		{
+			// Git rebase commands: pick, reword, edit, squash, fixup, drop
+			"scope": "support.function.git-rebase",
+			"settings": {
+				"foreground": "#FFFF00" // Yellow
+			}
+		},
+		{
+			// Git commit SHA hashes
+			"scope": "constant.sha.git-rebase",
+			"settings": {
+				"foreground": "#FF80FF" // Pink
+			}
+		},
+		
+		// ===================================================================
+		// HTML - SPECIFIC
+		// ===================================================================
+		
+		{
+			// HTML doctype: <!DOCTYPE html>
+			"scope": [
+				"meta.tag.sgml.doctype",
+				"punctuation.definition.tag.html"
+			],
+			"settings": {
+				"foreground": "#A000A0" // Purple
+			}
+		},
+		{
+			// HTML entities: &nbsp;, &lt;, &gt;, &#123;
+			"scope": "constant.character.entity.html",
+			"settings": {
+				"foreground": "#FF8800" // Orange
+			}
+		},
+		
+		// ===================================================================
+		// PYTHON - FORMAT STRINGS
+		// ===================================================================
+		
+		{
+			// Python f-strings: f"Hello {name}"
+			"scope": [
+				"string.interpolated.python",
+				"punctuation.definition.interpolation.begin.python",
+				"punctuation.definition.interpolation.end.python"
+			],
+			"settings": {
+				"foreground": "#0000FF" // Blue
+			}
+		},
+		
+		// ===================================================================
+		// JAVA - GENERICS
+		// ===================================================================
+		
+		{
+			// Java generic type brackets: List<String>
+			"scope": [
+				"punctuation.bracket.angle.java",
+				"storage.type.generic.java"
+			],
+			"settings": {
+				"foreground": "#70A0FF" // Light blue
+			}
+		},
+		
+		// ===================================================================
+		// SEMANTIC HIGHLIGHTING (TypeScript/JavaScript)
+		// ===================================================================
+		// These rules apply when semantic tokens are available
+		// Requires language server to be running
+		// ===================================================================
+	],
+	
+	"semanticHighlighting": true,
+	"semanticTokenColors": {
+		// === CLASSES ===
+		"class": {
+			"foreground": "#00FF00", // Green (NES green)
+			"fontStyle": "bold"
+		},
+		
+		// === INTERFACES (TypeScript) ===
+		"interface": {
+			"foreground": "#00FF00", // Green
+			"fontStyle": "bold"
+		},
+		
+		// === ENUMS ===
+		"enum": {
+			"foreground": "#00FF00", // Green
+			"fontStyle": "bold"
+		},
+		
+		// === TYPE ALIASES (TypeScript) ===
+		"type": {
+			"foreground": "#00FF00" // Green
+		},
+		
+		// === TYPE PARAMETERS (Generics) ===
+		"typeParameter": {
+			"foreground": "#70A0FF" // Light blue
+		},
+		
+		// === FUNCTIONS ===
+		"function": {
+			"foreground": "#FFFF00" // Yellow (NES yellow)
+		},
+		
+		// === METHODS ===
+		"method": {
+			"foreground": "#FFFF00" // Yellow
+		},
+		
+		// === VARIABLES ===
+		"variable": {
+			"foreground": "#70A0FF" // Light blue (NES light blue)
+		},
+		
+		// === PARAMETERS ===
+		"parameter": {
+			"foreground": "#FF80FF", // Pink (NES pink)
+			"fontStyle": "italic"
+		},
+		
+		// === PROPERTIES ===
+		"property": {
+			"foreground": "#70A0FF" // Light blue
+		},
+		
+		// === ENUM MEMBERS ===
+		"enumMember": {
+			"foreground": "#FF0000", // Red (NES red)
+			"fontStyle": "bold"
+		},
+		
+		// === NAMESPACES ===
+		"namespace": {
+			"foreground": "#A000A0" // Purple (NES purple)
+		},
+		
+		// === READONLY VARIABLES ===
+		"variable.readonly": {
+			"foreground": "#FF0000", // Red
+			"fontStyle": "bold"
+		},
+		
+		// === DECORATORS (TypeScript/Python) ===
+		"decorator": {
+			"foreground": "#FFFF00" // Yellow
 		}
-	]
+	}
 }
+
+// ===================================================================
+// 🎮 8-BIT COLOR PALETTE REFERENCE
+// ===================================================================
+// --nes-black: #000000       - Backgrounds, editor base
+// --nes-dark-gray: #4C4C4C   - Borders, inactive elements
+// --nes-gray: #A0A0A0        - Comments, line numbers, punctuation
+// --nes-white: #FFFFFF       - Main text, strings, operators
+// --nes-red: #FF0000         - Constants (true/false/null), errors, deleted lines
+// --nes-dark-red: #A00000    - Deprecated code
+// --nes-blue: #0000FF        - Keywords (const/let/var), types, control flow
+// --nes-dark-blue: #0000A0   - Status bar, inactive selections
+// --nes-light-blue: #70A0FF  - Variables, properties, attributes, links
+// --nes-green: #00FF00       - Classes, control flow, added lines, cursor
+// --nes-dark-green: #00A000  - (Reserved for future use)
+// --nes-yellow: #FFFF00      - Functions, CSS selectors, headers, selections
+// --nes-orange: #FF8800      - HTML tags, built-in functions, warnings
+// --nes-purple: #A000A0      - Modifiers, imports, special keywords
+// --nes-pink: #FF80FF        - Numbers, parameters, colors
+// ===================================================================
+
+// ===================================================================
+// 💡 TESTING YOUR THEME
+// ===================================================================
+// Test with this multi-language code sample:
+
+// ===================================================================
+// 🔧 HOW TO APPLY THIS THEME
+// ===================================================================
+// 1. Save this file in your theme extension folder
+// 2. Press F5 to test in Development Mode
+// 3. OR install with: code --install-extension your-theme.vsix
+// 4. Select theme: Ctrl+K Ctrl+T → "Cicero Lino Theme 8-bit"
+// ===================================================================
