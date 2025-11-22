@@ -2,7 +2,7 @@
   "name": "cicero-lino-theme",
   "displayName": "cicero-lino-theme",
   "description": "",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/CiceroLino/cicero-theme-vscode.git"
