@@ -3,6 +3,10 @@
   "displayName": "cicero-lino-theme",
   "description": "",
   "version": "0.0.1",
+   "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CiceroLino/cicero-theme-vscode.git"
+  },
   "engines": {
     "vscode": "^1.106.1"
   },
